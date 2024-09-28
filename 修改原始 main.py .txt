@@ -1,0 +1,14 @@
+222行:  DPT.util.io.write_depth_name(os.path.join(opt.workspace, opt.text.replace(" ", "_") + '_depth'),
+223行:                                    depth_prediction.squeeze().cpu().numpy(), bits=2)
+
+改为
+222行:  DPT.util.io.write_depth_name(os.path.join(opt.workspace, opt.text.replace(" ", "_") + '_depth'),
+223行:                                    depth_prediction.squeeze().cpu().numpy(), bits=2)
+————————————————————————————————————————
+228行:  depth = DPT.util.io.resize_img_cv(depth, ds_factor=1)    (删去）
+
+
+180   186
+
+50行 batch 改为 32
+42行step改为16

@@ -1,0 +1,10 @@
+名称:nerf
+python:3.8
+cuda:11.8.0
+cudnn:8.9.2
+pytorch:2.2.0
+torchvision:0.17.0
+torchaudio:2.2.0
+cub:1.17.2
+raymarching需要手动安装：python setup.py install
+

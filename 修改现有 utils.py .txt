@@ -1,0 +1,3 @@
+929  加
+            if i % 50 == 0:
+                self.save_checkpoint(name='rf', full=False, best=True)
