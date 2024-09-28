@@ -41,4 +41,8 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
-3. 
+3. Download the [DPT weights](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-midas-501f0c75.pt) and place it in the \DPT\weights folder.
+4. Download the [CLIP](https://huggingface.co/openai/clip-vit-large-patch14) and place it in the \openai folder.
+5. Download the [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and place it in the \segment-anything-main\models folder.
+6. Download the [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-2) and place it in the \stabilityai folder.
+7. Download the [BLIP-2](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth) and place it in the \salesforce folder.
