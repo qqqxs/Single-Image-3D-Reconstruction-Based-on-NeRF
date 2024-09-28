@@ -38,3 +38,7 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/single-image-3d-reconstruction.git
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. 
