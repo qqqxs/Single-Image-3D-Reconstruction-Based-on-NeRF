@@ -12,7 +12,7 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 
 - **Diffusion-Based Texture Enhancement**: Enhances model texture and detail quality through the integration of diffusion priors during the refinement stage, achieving a more realistic and visually accurate 3D model.
 
-- **Broad Application Potential**: Applicable to real-world 3D scene modeling, automatic driving, cultural heritage preservation, and high-quality text-to-3D generation based on a single image input.
+- **Broad Application Potential**: Applicable to real-world 3D scene modeling cultural heritage preservation, and high-quality AIGC generation.
 
 ## Technologies Used
 - **NeRF**: Utilized Mip-NeRF for efficient 3D scene representation and multi-scale neural rendering, improving geometric detail and scene reconstruction quality.
