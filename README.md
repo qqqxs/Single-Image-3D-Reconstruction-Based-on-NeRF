@@ -1,19 +1,18 @@
-# Single Image 3D Reconstruction Using NeRF
+# 🖼️ Single Image 3D Reconstruction Using NeRF
 
 ## Introduction
-This project implements a method for high-fidelity 3D reconstruction from a single 2D image by using NeRF and diffusion models. The key objective is to improve upon traditional 3D reconstruction methods by incorporating diffusion priors for enhanced texture and geometric details.
+This project implements a method for **high-fidelity 3D reconstruction** from a single 2D image using **NeRF** and **diffusion models**. The key objective is to improve upon traditional 3D reconstruction methods by incorporating diffusion priors for enhanced texture and geometric details.
 
-[![Contributors](https://img.shields.io/github/contributors/qqqxs/Simulation-Clock)](https://github.com/qqqxs/Simulation-Clock/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/qqqxs/Simulation-Clock?style=social)](https://github.com/qqqxs/Simulation-Clock/network/members)
-[![Stargazers](https://img.shields.io/github/stars/qqqxs/Simulation-Clock?style=social)](https://github.com/qqqxs/Simulation-Clock/stargazers)
-[![Issues](https://img.shields.io/github/issues/qqqxs/Simulation-Clock)](https://github.com/qqqxs/Simulation-Clock/issues)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/qqqxs/Simulation-Clock/blob/main/LICENSE)
-
-<div class="half">
-    <img src="demo/chimpanzee.png" width="128"><img src="demo/chimpanzee-rgb.gif" width="128"><img src="demo/chimpanzee-normal.gif" width="128"><img src="demo/teddy-2.png" width="128"><img src="demo/teddy-2-rgb.gif" width="128"><img src="demo/teddy-2-normal.gif" width="128">
+<div align="center">
+  <img src="demo/chimpanzee.png" width="150">
+  <img src="demo/chimpanzee-rgb.gif" width="150">
+  <img src="demo/chimpanzee-normal.gif" width="150">
+  <img src="demo/teddy-2.png" width="150">
+  <img src="demo/teddy-2-rgb.gif" width="150">
+  <img src="demo/teddy-2-normal.gif" width="150">
 </div>
 
-## Features
+## 🌟 Features
 - **Two-Stage Optimization Process**: Implements a novel two-stage approach. The first stage focuses on generating an initial 3D geometric structure using NeRF with positional encoding, hierarchical sampling, and volumetric rendering techniques. The second stage refines the model by converting the rough geometry into a textured point cloud, enhancing visual details using high-quality texture mapping and diffusion priors.
   
 - **High-Fidelity 3D Reconstruction**: Leveraged NeRF’s ability to simulate complex lighting effects to achieves highly detailed and realistic 3D models from a single 2D image.
@@ -22,7 +21,8 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 
 - **Broad Application Potential**: Applicable to real-world 3D scene modeling, cultural heritage preservation, and high-quality AIGC generation.
 
-## Technologies Used
+
+## 🛠 Technologies Used
 - **NeRF**: Utilized Mip-NeRF for efficient 3D scene representation and multi-scale neural rendering, improving geometric detail and scene reconstruction quality.
   
 - **Diffusion Model**: Employed Stable Diffusion 2.0 to enhance texture quality and generate high-fidelity visual details during the refinement stage.
@@ -42,7 +42,7 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 - **Raymarching**: Enabled fast real-time scene rendering through raymarching, providing efficient visualization of complex 3D environments.
 
 
-## Deployment Environment
+## 🚀 Deployment Environment
 
 The following versions were used for environment setup in this project:
 
@@ -55,7 +55,7 @@ The following versions were used for environment setup in this project:
 - **CUB**: 1.17.2
 
 
-## Installation
+## ⚙️ Installation
 1. Clone the repository:
 ```
    git clone https://github.com/qqqxs/Single-Image-3D-Reconstruction-Based-on-NeRF.git
@@ -70,7 +70,7 @@ The following versions were used for environment setup in this project:
 6. Download [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-2) and put it under \stabilityai.
 7. Download [BLIP-2](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth) and put it under \salesforce.
 
-## Train
+## 📈 Train
 
 ### Coarse Stage
 
@@ -94,6 +94,6 @@ Continue refining the model for an additional 3000 iterations:
 ```
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --refine_iters 3000 --refine
 ```
-## Results
+## 🏆 Results
 
 The method implemented delivers highly accurate and visually realistic 3D reconstructions, surpassing traditional approaches in both speed and quality. The model produces detailed geometry and texture from a single image, maintaining semantic consistency across novel views. Quantitative evaluations (e.g., SSIM, PSNR, LPIPS, CLIP Score) confirm superior performance, especially in scenarios with intricate textures and complex shapes, making this approach particularly effective for real-world applications such as virtual reality and AI-generated content.
