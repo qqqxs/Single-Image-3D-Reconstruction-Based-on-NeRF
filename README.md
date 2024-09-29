@@ -3,6 +3,12 @@
 ## Introduction
 This project implements a method for high-fidelity 3D reconstruction from a single 2D image by using NeRF and diffusion models. The key objective is to improve upon traditional 3D reconstruction methods by incorporating diffusion priors for enhanced texture and geometric details.
 
+[![Contributors](https://img.shields.io/github/contributors/qqqxs/Simulation-Clock)](https://github.com/qqqxs/Simulation-Clock/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/qqqxs/Simulation-Clock?style=social)](https://github.com/qqqxs/Simulation-Clock/network/members)
+[![Stargazers](https://img.shields.io/github/stars/qqqxs/Simulation-Clock?style=social)](https://github.com/qqqxs/Simulation-Clock/stargazers)
+[![Issues](https://img.shields.io/github/issues/qqqxs/Simulation-Clock)](https://github.com/qqqxs/Simulation-Clock/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/qqqxs/Simulation-Clock/blob/main/LICENSE)
+
 ## Features
 - **Two-Stage Optimization Process**: Implements a novel two-stage approach. The first stage focuses on generating an initial 3D geometric structure using NeRF with positional encoding, hierarchical sampling, and volumetric rendering techniques. The second stage refines the model by converting the rough geometry into a textured point cloud, enhancing visual details using high-quality texture mapping and diffusion priors.
   
@@ -35,7 +41,7 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/single-image-3d-reconstruction.git
+   git clone https://github.com/qqqxs/Single-Image-3D-Reconstruction-Based-on-NeRF.git
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
@@ -44,3 +50,5 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 5. Download [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and put it under \segment-anything-main\models.
 6. Download [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-2) and put it under \stabilityai.
 7. Download [BLIP-2](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth) and put it under \salesforce.
+
+## Useage
