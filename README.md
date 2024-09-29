@@ -53,11 +53,13 @@ The following versions were used for environment setup in this project:
 
 ## Installation
 1. Clone the repository:
-   ```bash
+```
    git clone https://github.com/qqqxs/Single-Image-3D-Reconstruction-Based-on-NeRF.git
+```
 2. Install the required dependencies:
-   ```bash
+```
    pip install -r requirements.txt
+```
 3. Download [DPT weights](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-midas-501f0c75.pt) and put it under \DPT\weights.
 4. Download [CLIP](https://huggingface.co/openai/clip-vit-large-patch14) and put it under \openai.
 5. Download [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and put it under \segment-anything-main\models.
@@ -69,25 +71,25 @@ The following versions were used for environment setup in this project:
 ### Coarse Stage
 
 **Initial 2000 Iterations**: Begin the training with a restricted range of camera views to allow the model to leverage reference views effectively, which helps avoid potential overfitting that could arise from random view sampling during early stages.
-
+```
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --iters 2000
-
+```
 **Continue for 3000 More Iterations**: After the initial 2000 iterations, further refine the model by continuing training for 3000 additional iterations. Adjust the field of view (FOV) if the model is showing issues with elongated geometries.
-
+```
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --albedo_iters 3500 --iters 5000 --final
-
+```
 If you encounter elongated geometries, you can increase the FOV parameters:
-
+```
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --fov 60 --fovy_range 50 70 --blob_radius 0.2 --albedo_iters 3500 --iters 5000 --final
-
+```
 ### Refine Stage
 
 In the refinement stage, further train the model to improve the texture and geometry detail. If you still encounter issues with geometries, you can continue to adjust the FOV parameters during this stage.
 
 Continue refining the model for an additional 3000 iterations:
-
+```
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --refine_iters 3000 --refine
-
+```
 ## Results
 
 The method implemented delivers highly accurate and visually realistic 3D reconstructions, surpassing traditional approaches in both speed and quality. The model produces detailed geometry and texture from a single image, maintaining semantic consistency across novel views. Quantitative evaluations (e.g., SSIM, PSNR, LPIPS, CLIP Score) confirm superior performance, especially in scenarios with intricate textures and complex shapes, making this approach particularly effective for real-world applications such as virtual reality and AI-generated content.
