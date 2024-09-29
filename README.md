@@ -6,13 +6,11 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 ## Features
 - **Two-Stage Optimization Process**: Implements a novel two-stage approach. The first stage focuses on generating an initial 3D geometric structure using NeRF with positional encoding, hierarchical sampling, and volumetric rendering techniques. The second stage refines the model by converting the rough geometry into a textured point cloud, enhancing visual details using high-quality texture mapping and diffusion priors.
   
-- **High-Fidelity 3D Reconstruction**: Achieves highly detailed and realistic 3D models from a single 2D image, leveraging NeRF’s ability to simulate complex lighting effects, including shadows, reflections, and refractions.
-
-- **Integration of SAM for Image Segmentation**: Uses Segment Anything Model (SAM) for efficient image foreground segmentation, improving the accuracy of the input data for the 3D reconstruction process.
+- **High-Fidelity 3D Reconstruction**: Leveraged NeRF’s ability to simulate complex lighting effects to achieves highly detailed and realistic 3D models from a single 2D image.
 
 - **Diffusion-Based Texture Enhancement**: Enhances model texture and detail quality through the integration of diffusion priors during the refinement stage, achieving a more realistic and visually accurate 3D model.
 
-- **Broad Application Potential**: Applicable to real-world 3D scene modeling cultural heritage preservation, and high-quality AIGC generation.
+- **Broad Application Potential**: Applicable to real-world 3D scene modeling, cultural heritage preservation, and high-quality AIGC generation.
 
 ## Technologies Used
 - **NeRF**: Utilized Mip-NeRF for efficient 3D scene representation and multi-scale neural rendering, improving geometric detail and scene reconstruction quality.
@@ -41,8 +39,8 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
-3. Download the [DPT weights](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-midas-501f0c75.pt) and place it in the \DPT\weights folder.
-4. Download the [CLIP](https://huggingface.co/openai/clip-vit-large-patch14) and place it in the \openai folder.
-5. Download the [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and place it in the \segment-anything-main\models folder.
-6. Download the [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-2) and place it in the \stabilityai folder.
-7. Download the [BLIP-2](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth) and place it in the \salesforce folder.
+3. Download [DPT weights](https://github.com/intel-isl/DPT/releases/download/1_0/dpt_hybrid-midas-501f0c75.pt) and put it under \DPT\weights.
+4. Download [CLIP](https://huggingface.co/openai/clip-vit-large-patch14) and put it under \openai.
+5. Download [SAM](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and put it under \segment-anything-main\models.
+6. Download [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-2) and put it under \stabilityai.
+7. Download [BLIP-2](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth) and put it under \salesforce.
