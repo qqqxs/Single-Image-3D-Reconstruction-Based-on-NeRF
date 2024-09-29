@@ -4,12 +4,12 @@
 This project implements a method for **high-fidelity 3D reconstruction** from a single 2D image using **NeRF** and **diffusion models**. The key objective is to improve upon traditional 3D reconstruction methods by incorporating diffusion priors for enhanced texture and geometric details.
 
 <div align="center">
-  <img src="demo/chimpanzee.png" width="150">
-  <img src="demo/chimpanzee-rgb.gif" width="150">
-  <img src="demo/chimpanzee-normal.gif" width="150">
-  <img src="demo/teddy-2.png" width="150">
-  <img src="demo/teddy-2-rgb.gif" width="150">
-  <img src="demo/teddy-2-normal.gif" width="150">
+  <img src="demo/chimpanzee.png" width="128">
+  <img src="demo/chimpanzee-rgb.gif" width="128">
+  <img src="demo/chimpanzee-normal.gif" width="128">
+  <img src="demo/teddy-2.png" width="128">
+  <img src="demo/teddy-2-rgb.gif" width="128">
+  <img src="demo/teddy-2-normal.gif" width="128">
 </div>
 
 ## 🌟 Features
