@@ -51,17 +51,17 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 6. Download [Stable Diffusion](https://huggingface.co/stabilityai/stable-diffusion-2) and put it under \stabilityai.
 7. Download [BLIP-2](https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base.pth) and put it under \salesforce.
 
-## Usage
+## Train
 
 ### Coarse Stage
 
-1. **Initial 2000 Iterations**: Begin the training with a restricted range of camera views to allow the model to leverage reference views effectively, which helps avoid potential overfitting that could arise from random view sampling during early stages.
+**Initial 2000 Iterations**: Begin the training with a restricted range of camera views to allow the model to leverage reference views effectively, which helps avoid potential overfitting that could arise from random view sampling during early stages.
 
     ```bash
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --iters 2000
     ```
 
-2. **Continue for 3000 More Iterations**: After the initial 2000 iterations, further refine the model by continuing training for 3000 additional iterations. Adjust the field of view (FOV) if the model is showing issues with elongated geometries.
+**Continue for 3000 More Iterations**: After the initial 2000 iterations, further refine the model by continuing training for 3000 additional iterations. Adjust the field of view (FOV) if the model is showing issues with elongated geometries.
 
     ```bash
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --albedo_iters 3500 --iters 5000 --final
@@ -77,9 +77,12 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 
 In the refinement stage, further train the model to improve the texture and geometry detail. If you still encounter issues with geometries, you can continue to adjust the FOV parameters during this stage.
 
-1. Continue refining the model for an additional 3000 iterations:
+Continue refining the model for an additional 3000 iterations:
 
     ```bash
     python main.py --workspace <workspace_name> --ref_path <path_to_image> --phi_range 135 225 --refine_iters 3000 --refine
     ```
 
+## Results
+
+The method achieves highly accurate and visually realistic 3D reconstructions, outperforming traditional methods in both speed and quality.
