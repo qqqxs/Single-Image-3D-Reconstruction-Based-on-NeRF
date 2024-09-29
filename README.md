@@ -9,6 +9,10 @@ This project implements a method for high-fidelity 3D reconstruction from a sing
 [![Issues](https://img.shields.io/github/issues/qqqxs/Simulation-Clock)](https://github.com/qqqxs/Simulation-Clock/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/qqqxs/Simulation-Clock/blob/main/LICENSE)
 
+<div class="half">
+    <img src="demo/chimpanzee.png" width="128"><img src="demo/chimpanzee-rgb.gif" width="128"><img src="demo/chimpanzee-normal.gif" width="128"><img src="demo/teddy-2.png" width="128"><img src="demo/teddy-2-rgb.gif" width="128"><img src="demo/teddy-2-normal.gif" width="128">
+</div>
+
 ## Features
 - **Two-Stage Optimization Process**: Implements a novel two-stage approach. The first stage focuses on generating an initial 3D geometric structure using NeRF with positional encoding, hierarchical sampling, and volumetric rendering techniques. The second stage refines the model by converting the rough geometry into a textured point cloud, enhancing visual details using high-quality texture mapping and diffusion priors.
   
